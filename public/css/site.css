@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+    --accent: #2490ba;
+    --color-accent: var(--accent);
+}
+
+:root {
+    color-scheme: light;
+}
+
+body {
+    min-height: 100vh;
+}
+
+body.page-photo header {
+    @apply hidden md:flex;
+}
+
+.avatar-squircle {
+    clip-path: url(#squircle);
+}

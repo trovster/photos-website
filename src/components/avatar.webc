@@ -1,0 +1,10 @@
+<picture class="block avatar-squircle shrink-0 aspect-square w-28 overflow-hidden mb-2 bg-accent md:w-40 md:mb-0">
+    <img :src="profile.avatar.src" :alt="profile.avatar.alt" rel="me" class="h-full w-full object-cover" />
+</picture>
+
+<svg class="h-0 w-0">
+    <clipPath id="squircle" clipPathUnits="objectBoundingBox">
+        <path d="M0.5,0C0.9,0 1,0.09 1,0.5C1,0.91 0.9,1 0.5,1C0.09,1 0,0.9 0,0.5C0,0.09 0.09,0 0.5,0Z"></path>
+    </clipPath>
+</svg>
+

@@ -1,0 +1,21 @@
+<section class="mx-4 pb-10">
+    <div>
+        <img class="h-auto w-full bg-zinc-100 object-contain" :src="photo.data.src" :alt="photo.data.alt" />
+    </div>
+
+    <photo-palette :palette="photo.data.palette"></photo-palette>
+
+    <div class="mt-2 flex flex-wrap items-center justify-between gap-1">
+        <h2 class="font-display text-lg text-zinc-900" @text="photo.data.title"></h2>
+
+        <photo-exif-button :photo="photo"></photo-exif-button>
+    </div>
+
+    <p class="text-sm text-zinc-500 mb-1" @text="date(photo.date, 'cccc dS LLLL y')"></p>
+
+    <slot></slot>
+
+    <photo-exif :photo="photo"></photo-exif>
+</section>
+
+<photo-nav :photo="photo"></photo-nav>

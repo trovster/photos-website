@@ -1,0 +1,39 @@
+---
+title: About
+description: More about Trevor Morris and this photo archive.
+bodyClass: page page-about
+---
+<section class="m-4 mb-8 md:mx-10 rounded-xl flex flex-col gap-y-8 border border-zinc-400 p-6 md:p-10 md:mt-0">
+    <div>
+        <p class="text-xs uppercase tracking-widest text-zinc-500">About</p>
+        <h2 class="font-display text-2xl text-zinc-900 sm:text-3xl">My Photos</h2>
+    </div>
+
+    <div class="prose space-y-4">
+        <p>
+            This website showcases my favourite photos.
+        </p>
+
+        <p>
+            The navigation icons are from <a href="https://heroicons.com" class="underline decoration-accent decoration-2 outline-none underline-offset-2 outline-offset-2 hover:no-underline focus-visible:no-underline focus-visible:outline-accent">Heroicons</a>.
+            The icons for Exposure Time, Aperture, Focal Length, Camera, and
+            Flash are by Denis Klyuchnikov from <a href="https://thenounproject.com" class="underline decoration-accent decoration-2 outline-none underline-offset-2 outline-offset-2 hover:no-underline focus-visible:no-underline focus-visible:outline-accent">Noun Project</a>.
+        </p>
+    </div>
+
+    <div class="flex flex-wrap items-center gap-3">
+        <a
+            href="/"
+            class="rounded-full bg-zinc-900 px-4 py-2 text-sm font-medium text-white outline-accent transition hover:-translate-y-0.5 focus-visible:outline-2">
+            Browse the Photos
+        </a>
+        <a
+            :href="profile.website"
+            rel="me external"
+            class="rounded-full border border-zinc-400 bg-white px-4 py-2 text-sm font-medium text-zinc-700 outline-accent transition hover:-translate-y-0.5 focus-visible:outline-2 hover:bg-zinc-200">
+            Visit Website
+        </a>
+    </div>
+</section>
+
+<site-footer :page="page"></site-footer>
