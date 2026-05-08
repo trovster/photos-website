@@ -9,14 +9,16 @@
     color-scheme: light;
 }
 
-body {
-    min-height: 100vh;
-}
-
 body.page-photo header {
     @apply hidden md:flex;
 }
 
 .avatar-squircle {
     clip-path: url(#squircle);
+}
+
+@supports (height: 100dvh) {
+     .container.min-h-screen {
+          min-height: 100dvh;
+     }
 }
