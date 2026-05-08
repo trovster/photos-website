@@ -18,6 +18,11 @@ body.page-general header {
     clip-path: url(#squircle);
 }
 
+.prose .link {
+    @apply underline decoration-accent decoration-2 outline-none underline-offset-2 outline-offset-2;
+    @apply hover:no-underline focus-visible:no-underline focus-visible:outline-accent;
+}
+
 @supports (height: 100dvh) {
      .container.min-h-screen {
           min-height: 100dvh;

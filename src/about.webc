@@ -3,7 +3,7 @@ title: About
 description: More about Trevor Morris and this photo archive.
 bodyClass: page page-about page-general
 ---
-<section class="m-4 mb-8 md:mx-10 rounded-xl flex flex-col gap-y-8 border border-zinc-400 p-6 md:p-10 md:mt-0">
+<section class="mx-4 mb-8 md:mx-10 rounded-xl flex flex-col gap-y-8 border border-zinc-400 p-6 md:p-10">
     <div>
         <p class="text-xs uppercase tracking-widest text-zinc-500">About</p>
         <h2 class="font-display text-2xl text-zinc-900 sm:text-3xl">My Photos</h2>
@@ -15,9 +15,24 @@ bodyClass: page page-about page-general
         </p>
 
         <p>
-            The navigation icons are from <a href="https://heroicons.com" class="underline decoration-accent decoration-2 outline-none underline-offset-2 outline-offset-2 hover:no-underline focus-visible:no-underline focus-visible:outline-accent">Heroicons</a>.
+            The project is built using the static site generator
+            <a href="https://www.11ty.dev" class="link" rel="external">11ty</a>.
+            It uses <a href="https://tailwindcss.com" class="link" rel="external">tailwindcss</a>
+            for the basic styling. The EXIF data is pulled using the
+            <a href="https://www.npmjs.com/package/exifr" class="link" rel="external">exifr</a> package,
+            and <a href="colorthief" class="link" rel="external">colorthief</a> is used
+            for the photo colour palette.
+        </p>
+
+        <p>
+            You can create your own version from the
+            <a href="https://github.com/trovster/photos-website" class="link" rel="external">git repository</a>.
+        </p>
+
+        <p>
+            The navigation icons are from <a href="https://heroicons.com" class="link" rel="external">Heroicons</a>.
             The icons for Exposure Time, Aperture, Focal Length, Camera, and
-            Flash are by Denis Klyuchnikov from <a href="https://thenounproject.com" class="underline decoration-accent decoration-2 outline-none underline-offset-2 outline-offset-2 hover:no-underline focus-visible:no-underline focus-visible:outline-accent">Noun Project</a>.
+            Flash are by Denis Klyuchnikov from <a href="https://thenounproject.com" class="link" rel="external">Noun Project</a>.
         </p>
     </div>
 

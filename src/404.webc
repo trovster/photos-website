@@ -4,28 +4,29 @@ description: The page you requested could not be found.
 bodyClass: page page-general
 permalink: 404.html
 ---
-<section class="mx-4 md:mx-10 rounded-xl flex flex-col gap-y-8 border border-black/5 bg-white/85 p-6 shadow-lg backdrop-blur md:p-10">
+<section class="mx-4 mb-8 md:mx-10 rounded-xl flex flex-col gap-y-8 border border-zinc-400 p-6 md:p-10">
 
     <div>
-        <p class="mb-2 text-xs uppercase tracking-widest text-zinc-500">404</p>
+        <p class="text-xs uppercase tracking-widest text-zinc-500">404</p>
         <h2 class="font-display text-2xl text-zinc-900 sm:text-3xl">Page Not Found</h2>
     </div>
 
-    <div class="prose">
+    <div class="prose space-y-4">
         <p>The page you requested does not exist in this archive.</p>
-        <p>You can head back to the photo listing or read more about the project.</p>
+
+        <p>You can head back to the photo listing or <a href="/about" class="link">read more about the project</a>.</p>
     </div>
 
-    <div class="mt-8 flex flex-wrap items-center gap-3">
+    <div class="flex flex-wrap items-center gap-3">
         <a
             href="/"
             class="inline-flex items-center rounded-full bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition hover:-translate-y-0.5">
-            Browse the photos
+            Browse the Photos
         </a>
         <a
             href="/about/"
             class="inline-flex items-center rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-medium text-zinc-700 transition hover:-translate-y-0.5 hover:bg-zinc-200">
-            About this site
+            About this Website
         </a>
     </div>
 </section>
