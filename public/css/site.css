@@ -23,6 +23,14 @@ body.page-general header {
     @apply hover:no-underline focus-visible:no-underline focus-visible:outline-accent;
 }
 
+.button {
+    @apply px-4 py-2 text-sm font-medium rounded-full bg-zinc-900 text-white outline-accent transition hover:-translate-y-0.5 focus-visible:outline-2;
+}
+
+.button--secondary {
+    @apply border border-accent bg-white text-accent;
+}
+
 @supports (height: 100dvh) {
      .container.min-h-screen {
           min-height: 100dvh;
