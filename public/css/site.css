@@ -9,7 +9,8 @@
     color-scheme: light;
 }
 
-body.page-photo header {
+body.page-photo header,
+body.page-general header {
     @apply hidden md:flex;
 }
 

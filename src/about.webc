@@ -1,7 +1,7 @@
 ---
 title: About
 description: More about Trevor Morris and this photo archive.
-bodyClass: page page-about
+bodyClass: page page-about page-general
 ---
 <section class="m-4 mb-8 md:mx-10 rounded-xl flex flex-col gap-y-8 border border-zinc-400 p-6 md:p-10 md:mt-0">
     <div>
