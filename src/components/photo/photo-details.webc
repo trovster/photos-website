@@ -1,6 +1,15 @@
 <section class="mx-4 pb-10">
-    <div>
-        <img class="h-auto w-full bg-zinc-100 object-contain" :src="photo.data.src" :alt="photo.data.alt" />
+    <div class="relative overflow-hidden bg-zinc-100">
+        <canvas
+            webc:if="photo.data.blurhash"
+            :data-blurhash="photo.data.blurhash"
+            data-blurhash-width="32"
+            data-blurhash-height="48"
+            aria-hidden="true"
+            class="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover blur-3xl transition duration-300"
+        ></canvas>
+
+        <img class="relative h-auto w-full object-contain" :src="photo.data.src" :alt="photo.data.alt" />
     </div>
 
     <photo-palette :palette="photo.data.palette"></photo-palette>

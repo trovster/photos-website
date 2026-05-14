@@ -7,7 +7,7 @@ This is a small personal photo website, built with [11ty](https://www.11ty.dev).
 - 11ty for static site generation
 - WebC for layouts and components
 - Tailwind CSS via PostCSS for styling
-- Sharp, colorthief, and Eleventy image tooling for photo processing
+- Sharp, BlurHash, colorthief, and Eleventy image tooling for photo processing
 
 ## Development
 
