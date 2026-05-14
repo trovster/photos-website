@@ -1,4 +1,4 @@
-<header class="p-4 pb-2 md:mx-6 md:flex md:items-center md:gap-4 md:pb-8">
+<header class="p-4 md:mx-6 md:flex md:items-center md:gap-4 md:pb-8">
     <avatar :profile="profile"></avatar>
 
     <div>
