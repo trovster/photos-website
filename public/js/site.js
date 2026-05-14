@@ -1,3 +1,7 @@
 import { initBlurhashPlaceholders } from "./blurhash.js"
+import { initInfinitePhotoPagination } from "./infinite-scroll.js"
 
-initBlurhashPlaceholders()
+if (typeof document !== "undefined" && typeof window !== "undefined") {
+    initBlurhashPlaceholders()
+    initInfinitePhotoPagination()
+}

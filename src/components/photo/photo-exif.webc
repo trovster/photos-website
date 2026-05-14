@@ -16,7 +16,7 @@
 
                 <button
                     type="button"
-                    class="p-1.5 rounded-full border border-zinc-200 bg-white text-zinc-500 dark:bg-zinc-800 dark:border-zinc-900 dark:text-zinc-300 hover:border-accent hover:text-accent focus-visible:outline-accent focus-visible:outline-2"
+                    class="p-1.5 rounded-full border cursor-pointer border-zinc-200 bg-white text-zinc-500 dark:bg-zinc-800 dark:border-zinc-900 dark:text-zinc-300 hover:border-accent hover:text-accent focus-visible:outline-accent focus-visible:outline-2"
                     aria-label="Close photo metadata"
                     :popovertarget="`photo-metadata-${photo.data.id}`"
                     popovertargetaction="hide"

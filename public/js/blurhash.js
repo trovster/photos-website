@@ -154,8 +154,8 @@ const paintBlurhash = (canvas) => {
     context.putImageData(new ImageData(pixels, width, height), 0, 0)
 }
 
-export const initBlurhashPlaceholders = () => {
-    const canvases = document.querySelectorAll("canvas[data-blurhash]")
+export const initBlurhashPlaceholders = (root = document) => {
+    const canvases = root.querySelectorAll("canvas[data-blurhash]")
 
     for (const canvas of canvases) {
         try {

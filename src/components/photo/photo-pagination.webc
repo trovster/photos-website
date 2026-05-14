@@ -3,7 +3,22 @@
         Previous
     </a>
 
-    <a webc:if="pagination.href.next" :href="pagination.href.next" class="ml-auto button button--alt">
+    <a
+        webc:if="pagination.href.next"
+        :href="pagination.href.next"
+        class="ml-auto button button--alt"
+        rel="next"
+        data-photo-list-next
+        data-ready-text="Next"
+        data-loading-text="Loading…"
+    >
         Next
     </a>
+
+    <p
+        class="ml-auto text-sm text-zinc-500"
+        data-photo-list-status
+        aria-live="polite"
+        @text="pagination.href.next ? '' : 'End'"
+    ></p>
 </nav>

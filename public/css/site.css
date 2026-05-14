@@ -38,6 +38,14 @@ body.page-general header {
     @apply hover:translate-y-0 hover:bg-accent/10;
 }
 
+[data-photo-list-next][data-loading="true"] {
+    @apply pointer-events-none opacity-60;
+}
+
+[data-photo-list-status] {
+    @apply hidden;
+}
+
 @supports (height: 100dvh) {
      .container.min-h-screen {
           min-height: 100dvh;
