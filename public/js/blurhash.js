@@ -51,11 +51,7 @@ const decodeAc = (value, maximumValue) => {
     const green = Math.floor(value / 19) % 19
     const blue = value % 19
 
-    return [
-        signPow((red - 9) / 9, 2) * maximumValue,
-        signPow((green - 9) / 9, 2) * maximumValue,
-        signPow((blue - 9) / 9, 2) * maximumValue,
-    ]
+    return [signPow((red - 9) / 9, 2) * maximumValue, signPow((green - 9) / 9, 2) * maximumValue, signPow((blue - 9) / 9, 2) * maximumValue]
 }
 
 const decodeBlurhash = (blurhash, width, height, punch = 1) => {
@@ -80,10 +76,7 @@ const decodeBlurhash = (blurhash, width, height, punch = 1) => {
             continue
         }
 
-        colors[index] = decodeAc(
-            decode83(blurhash.slice(4 + index * 2, 6 + index * 2)),
-            maximumValue * punch,
-        )
+        colors[index] = decodeAc(decode83(blurhash.slice(4 + index * 2, 6 + index * 2)), maximumValue * punch)
     }
 
     const pixels = new Uint8ClampedArray(width * height * 4)
@@ -99,8 +92,7 @@ const decodeBlurhash = (blurhash, width, height, punch = 1) => {
                 const basisY = Math.cos((Math.PI * y * componentYIndex) / height)
 
                 for (let componentXIndex = 0; componentXIndex < componentX; componentXIndex += 1) {
-                    const basis =
-                        Math.cos((Math.PI * x * componentXIndex) / width) * basisY
+                    const basis = Math.cos((Math.PI * x * componentXIndex) / width) * basisY
                     const color = colors[componentXIndex + componentYIndex * componentX]
 
                     red += color[0] * basis

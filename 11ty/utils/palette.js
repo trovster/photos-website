@@ -1,4 +1,3 @@
-
 import { getPalette } from "colorthief"
 
 export default async (file) => {

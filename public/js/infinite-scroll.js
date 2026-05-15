@@ -31,17 +31,7 @@ const importListItems = (items) => {
     return fragment
 }
 
-export const createInfiniteScroller = ({
-    list,
-    nextLink,
-    status,
-    fetchPage,
-    parsePage,
-    replaceUrl,
-    observerFactory,
-    importItems,
-    onItemsAppended,
-}) => {
+export const createInfiniteScroller = ({ list, nextLink, status, fetchPage, parsePage, replaceUrl, observerFactory, importItems, onItemsAppended }) => {
     if (!list || !nextLink) {
         return null
     }
@@ -163,11 +153,13 @@ export const initInfinitePhotoPagination = () => {
         replaceUrl: (url) => {
             window.history.replaceState({}, "", url)
         },
-        observerFactory: "IntersectionObserver" in window
-            ? (callback) => new IntersectionObserver(callback, {
-                rootMargin: "200px 0px",
-            })
-            : null,
+        observerFactory:
+            "IntersectionObserver" in window
+                ? (callback) =>
+                      new IntersectionObserver(callback, {
+                          rootMargin: "200px 0px",
+                      })
+                : null,
         importItems: importListItems,
         onItemsAppended: (fragment) => {
             initBlurhashPlaceholders(fragment)

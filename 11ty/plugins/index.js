@@ -31,9 +31,9 @@ export default (config) => {
                     base: site.url,
                     author: {
                         name: site.author,
-                    }
-                }
-            }
+                    },
+                },
+            },
         },
         {
             plugin: eleventyImageTransformPlugin,
@@ -43,9 +43,9 @@ export default (config) => {
                         loading: "lazy",
                         decoding: "async",
                     },
-                    pictureAttributes: {}
+                    pictureAttributes: {},
                 },
-            }
+            },
         },
     ]
 

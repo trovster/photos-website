@@ -1,4 +1,4 @@
-import { dateToRfc3339, dateToRfc822 } from "@11ty/eleventy-plugin-rss";
+import { dateToRfc3339, dateToRfc822 } from "@11ty/eleventy-plugin-rss"
 import { DateTime } from "luxon"
 
 // @see https://github.com/moment/luxon/issues/118

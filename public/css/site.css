@@ -43,7 +43,7 @@ body.page-general header {
 }
 
 @supports (height: 100dvh) {
-     .container.min-h-screen {
-          min-height: 100dvh;
-     }
+    .container.min-h-screen {
+        min-height: 100dvh;
+    }
 }
