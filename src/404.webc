@@ -8,7 +8,7 @@ permalink: 404.html
 
     <div>
         <p class="text-xs uppercase tracking-widest text-accent">404</p>
-        <h2 class="font-display text-2xl text-zinc-900 sm:text-3xl">Page Not Found</h2>
+        <h2 class="font-display text-2xl sm:text-3xl">Page Not Found</h2>
     </div>
 
     <div class="prose space-y-4">

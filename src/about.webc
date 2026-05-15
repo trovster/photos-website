@@ -6,7 +6,7 @@ bodyClass: page page-about page-general
 <section class="mx-4 mb-8 md:mx-10 rounded-xl flex flex-col gap-y-8 border border-accent p-6 md:p-10">
     <div>
         <p class="text-xs uppercase tracking-widest text-accent">About</p>
-        <h2 class="font-display text-2xl text-zinc-900 sm:text-3xl">My Photos</h2>
+        <h2 class="font-display text-2xl sm:text-3xl">My Photos</h2>
     </div>
 
     <div class="prose space-y-4">
