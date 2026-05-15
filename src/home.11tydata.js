@@ -5,6 +5,7 @@ export default {
         data: "collections.photos",
         size: photos.pagination,
         alias: "paginatedPhotos",
+        reverse: true,
     },
     permalink: ({ pagination }) => pagination.pageNumber > 0 ? `/page/${pagination.pageNumber + 1}/` : "/",
     eleventyComputed: {

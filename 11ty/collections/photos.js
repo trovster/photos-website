@@ -7,9 +7,9 @@ import palette from "../utils/palette.js"
 import siblings from "../utils/photo-siblings.js"
 
 export default async (api, config) => {
-  const photos = api.getFilteredByGlob("**/photos/**/*.md").reverse()
+  const photos = api.getFilteredByGlob("**/photos/**/*.md")
 
-  return photos.map(async (photo, index) => {
+  return Promise.all(photos.map(async (photo, index) => {
     const file = path.join(path.dirname(photo.inputPath), photo.data.src)
     const src = path.join(path.dirname(photo.filePathStem), photo.data.src)
     const { previous, next } = siblings(photos, index)
@@ -28,5 +28,5 @@ export default async (api, config) => {
         next,
       }
     }
-  })
+  }))
 }

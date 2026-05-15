@@ -1,3 +1,4 @@
+import { dateToRfc3339, dateToRfc822 } from "@11ty/eleventy-plugin-rss";
 import { DateTime } from "luxon"
 
 // @see https://github.com/moment/luxon/issues/118
@@ -22,6 +23,10 @@ const dates = {
         date = (date instanceof Date ? DateTime.fromJSDate(date) : DateTime.fromISO(date)).setLocale(locale)
         return date.toFormat(format.replace("dS ", ordinal(date.day)))
     },
+
+    dateToRfc3339,
+
+    dateToRfc822,
 }
 
 export default dates

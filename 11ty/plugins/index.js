@@ -1,29 +1,55 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy"
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
-import EleventyNavigationPlugin from "@11ty/eleventy-navigation"
+import { feedPlugin } from "@11ty/eleventy-plugin-rss"
 import EleventyWebcPlugin from "@11ty/eleventy-plugin-webc"
-
-const plugins = {
-    EleventyHtmlBasePlugin,
-    EleventyNavigationPlugin,
-}
+import site from "../../src/data/site.js"
 
 export default (config) => {
-    config.addPlugin(EleventyWebcPlugin, {
-        components: [`${config.dir.input}/components/**/*.webc`],
-    })
-
-    config.addPlugin(eleventyImageTransformPlugin, {
-        htmlOptions: {
-            imgAttributes: {
-                loading: "lazy",
-                decoding: "async",
-            },
-            pictureAttributes: {}
+    const plugins = [
+        {
+            plugin: EleventyHtmlBasePlugin,
         },
-    })
+        {
+            plugin: EleventyWebcPlugin,
+            options: {
+                components: [`${config.dir.input}/components/**/*.webc`],
+            },
+        },
+        {
+            plugin: feedPlugin,
+            options: {
+                type: "atom",
+                outputPath: "/feed.xml",
+                collection: {
+                    name: "photos",
+                    limit: 10,
+                },
+                metadata: {
+                    language: "en",
+                    title: site.title,
+                    subtitle: site.description,
+                    base: site.url,
+                    author: {
+                        name: site.author,
+                    }
+                }
+            }
+        },
+        {
+            plugin: eleventyImageTransformPlugin,
+            options: {
+                htmlOptions: {
+                    imgAttributes: {
+                        loading: "lazy",
+                        decoding: "async",
+                    },
+                    pictureAttributes: {}
+                },
+            }
+        },
+    ]
 
-    for (const [name, plugin] of Object.entries(plugins)) {
-        config.addPlugin(plugin)
+    for (const plugin of plugins) {
+        config.addPlugin(plugin.plugin, plugin.options)
     }
 }

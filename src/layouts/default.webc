@@ -24,6 +24,8 @@
 
         <link webc:keep rel="stylesheet" href="/css/site.css"/>
 
+        <link rel="alternate" type="application/atom+xml" :title="site.title" href="/feed.xml" />
+
         <script webc:keep src="/js/site.js" type="module"></script>
     </head>
     <body :class="bodyClass ?? ''">
