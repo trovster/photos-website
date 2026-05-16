@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  URL: "https://trovster.github.io/photos-website/"
+  URL: "https://trovster.github.io"
 
 jobs:
   build-and-deploy:
