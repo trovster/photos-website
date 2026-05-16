@@ -39,7 +39,9 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm install
-          npm run build --pathprefix=--pathprefix=/photos-website/
+          npm run clean
+          npx @11ty/eleventy --pathprefix=/photos-website/
+          npm run css -- --minify
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
