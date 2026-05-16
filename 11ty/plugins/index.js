@@ -3,11 +3,18 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
 import { feedPlugin } from "@11ty/eleventy-plugin-rss"
 import EleventyWebcPlugin from "@11ty/eleventy-plugin-webc"
 import site from "../../src/data/site.js"
+import { applyHtmlBasePathPrefix } from "../utils/html-base.js"
 
 export default (config) => {
     const plugins = [
         {
             plugin: EleventyHtmlBasePlugin,
+            options: {
+                // WebC renders nested HTML multiple times, so we keep the base
+                // filters but replace the automatic URL transform with an
+                // idempotent version below.
+                extensions: "",
+            },
         },
         {
             plugin: EleventyWebcPlugin,
@@ -52,4 +59,25 @@ export default (config) => {
     for (const plugin of plugins) {
         config.addPlugin(plugin.plugin, plugin.options)
     }
+
+    config.htmlTransformer.addUrlTransform(
+        "html",
+        function (urlInMarkup) {
+            const base = this.baseHref || config.pathPrefix
+
+            if (base === "/") {
+                return urlInMarkup
+            }
+
+            return applyHtmlBasePathPrefix(urlInMarkup.trim(), {
+                base,
+                pageUrl: this.url,
+                pathPrefix: config.pathPrefix,
+            })
+        },
+        {
+            priority: -2,
+            enabled: (context) => Boolean(context.baseHref) || config.pathPrefix !== "/",
+        },
+    )
 }

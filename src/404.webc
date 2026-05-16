@@ -14,7 +14,7 @@ permalink: 404.html
     <div class="prose space-y-4">
         <p>The page you requested does not exist in this archive.</p>
 
-        <p>You can head back to the photo listing or <a href="/about" class="link">read more about the project</a>.</p>
+        <p>You can head back to the photo listing or <a href="/about/" class="link">read more about the project</a>.</p>
     </div>
 
     <div class="flex flex-wrap items-center gap-3">

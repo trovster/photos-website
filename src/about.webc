@@ -1,6 +1,6 @@
 ---
 title: About
-description: More about Trevor Morris and this photo archive.
+description: More about this website.
 bodyClass: page page-about page-general
 ---
 <section class="mx-4 mb-8 md:mx-10 rounded-xl flex flex-col gap-y-8 border border-accent p-6 md:p-10">
@@ -39,7 +39,7 @@ bodyClass: page page-about page-general
 
     <div class="flex flex-wrap items-center gap-3">
         <a href="/" class="button"> Browse the Photos</a>
-        <a :href="profile.website" rel="me external" class="button button--secondary">Visit Website</a>
+        <a webc:if="profile.website.length" :href="profile.website" rel="me external" class="button button--secondary">Visit Website</a>
     </div>
 </section>
 

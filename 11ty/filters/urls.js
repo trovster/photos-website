@@ -9,7 +9,11 @@ const urls = {
      * @returns {String} - the shortened URL
      */
     shorten: (url) => {
-        url = new URL(url)
+        try {
+            url = new URL(url)
+        } catch {
+            return url
+        }
 
         return url.host.replace(/^www\./, "") + (url.pathname !== "/" ? url.pathname : "")
     },
