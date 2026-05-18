@@ -7,7 +7,7 @@
     <div
         class="flex justify-center items-center w-full min-h-full p-4 outline-none"
     >
-        <div class="w-full max-w-md sm:max-w-xl mx-auto rounded-xl border border-zinc-200 p-4 shadow-xl dark:bg-zinc-800 dark:border-zinc-900">
+        <div class="w-full max-w-md sm:max-w-xl mx-auto rounded-xl border border-zinc-200 p-4 shadow-xl bg-white dark:bg-zinc-800 dark:border-zinc-900">
             <div class="relative mb-4 flex items-start justify-between">
                 <div>
                     <p class="text-xs uppercase tracking-wider text-zinc-500 dark:text-zinc-300">Photo Metadata</p>
