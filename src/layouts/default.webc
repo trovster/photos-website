@@ -32,7 +32,6 @@
         <div class="container relative min-h-screen mx-auto max-w-4xl py-4">
             <site-header :profile="profile"></site-header>
             <main @raw="content"></main>
-            <!-- <site-footer :navigation="navigation" :page="page"></site-footer> -->
         </div>
     </body>
 </html>
